@@ -1,0 +1,12 @@
+{
+  "name": "p2_godiah",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch stylesheets:CSS"
+  },
+  "author": "",
+  "license": "ISC"
+}

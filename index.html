@@ -1,39 +1,193 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Reserve table online" />
+    <meta name="keywords" content="restaurants, booking, reservation" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>OhMyFood</title>
 
-</head>
-<meta charset="utf-8" />
-  <meta name="description" content="Reserve table online" />
-  <meta name="keywords" content="restaurants, booking, reservation" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/56b3802728.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <title>OhMyFood</title>
+    <link href="./CSS/main.css" type="text/css" rel="stylesheet" />
+  </head>
 
-  <link href="./CSS/normalise.css" type="text/css" rel="stylesheet" />
-  
- 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+  <body>
+    <header class="main-header">
+      <nav class="nav-header">
+        <a href="#"
+          ><img
+            id="logo"
+            src="./images/logo/ohmyfood@2x.svg"
+            alt="OhMyFood logo"
+        /></a>
+      </nav>
+    </header>
 
+    <main class="MainHomepage">
+      <div class="LocationWrapper">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Paris, Belleville</p>
+      </div>
 
+      <section class="section-1">
+        <h3>Book the menu you like</h3>
+        <p>Discover top-of-art restaurants we picked for you</p>
 
-  <script src="https://kit.fontawesome.com/56b3802728.js" crossorigin="anonymous"></script>
+        <button>
+          <span id="explore-button-text">Explore our restaurants </span>
+        </button>
+      </section>
 
+      <section class="section-2">
+        <h3>How it works</h3>
 
-<body>
-    
-  <section class="main-header">
+        <div class="step choose-restaurant-button">
+          <p>1</p>
 
-    <nav class="nav-header">
-    <a href="#"><img id="logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo" /></a>
-  </section>
-    
-  
+          <button>
+            <i class="fa-solid fa-mobile"></i>
+            <span class="label">Choose a restaurant</span>
+          </button>
+        </div>
 
- 
-</body>
+        <div class="step create-menu-button">
+          <p>2</p>
+          <button>
+            <i class="fa-solid fa-list"></i>
+            <span class="label">Create your menu</span>
+          </button>
+        </div>
+
+        <div class="step go-enjoy-button">
+          <p>3</p>
+          <button>
+            <i class="fa-solid fa-store"></i>
+            <span class="label">Go enjoy it at the restaurant </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-3">
+        <h3>Restaurants</h3>
+
+        <div class="restaurant-card">
+          <div class="card-image">
+            <img
+              src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="The Full Palette"
+            />
+          </div>
+
+          <div class="text">
+            <span class="text-wrap">
+              <h5>The Full Palette</h5>
+              <p>New York</p>
+            </span>
+            <div class="heart-icon">
+              <i class="fa-sharp fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant-card" id="enchanted-plate">
+          <div class="card-image">
+            <img
+              src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+              alt="The Enchanted Plate"
+            />
+          </div>
+
+          <div class="text">
+            <span class="text-wrap">
+              <h5>The Enchanted Plate</h5>
+              <p>New York</p>
+            </span>
+
+            <div class="heart-icon">
+              <i class="fa-sharp fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant-card">
+          <div class="card-image">
+            <img
+              src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+              alt="Bastillee"
+            />
+          </div>
+
+          <div class="text">
+            <span class="text-wrap">
+              <h5>Bastille</h5>
+              <p>New York</p>
+            </span>
+
+            <div class="heart-icon">
+              <i class="fa-sharp fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant-card">
+          <div class="card-image">
+            <img
+              src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              alt="Le Gourmand"
+            />
+          </div>
+
+          <div class="text">
+            <div class="text-wrap">
+              <h5>Le Gourmand</h5>
+              <p>New York</p>
+            </div>
+
+            <div class="heart-icon">
+              <i class="fa-sharp fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-logo">
+        <a href="#"><img src="images/logo/ohmyfood@2x.svg" alt="Ohmylogo" /></a>
+      </div>
+
+      <ul class="footer">
+        <li class="suggest">
+          <i class="fa-solid fa-utensils"></i>
+          <a class="footer-link" href="#">Suggest a restaurant</a>
+        </li>
+
+        <li id="partner">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <a class="footer-link" href="#">Become a partner</a>
+        </li>
+
+        <li id="legal">
+          <a class="footer-link" href="#">Legal</a>
+        </li>
+
+        <li id="Contact">
+          <a class="footer-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

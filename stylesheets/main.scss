@@ -1,0 +1,189 @@
+@import "normalize.scss";
+$primaryColor: #9356dc;
+$secondaryColor: #ff79da;
+$tertiaryColor: #99e2d0;
+
+$backgroundColor: #f2f2f2;
+$footerColor: #2b2928;
+
+$borderRadius-card: 24px;
+
+/* mix ins */
+
+@mixin center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+@mixin centerCol {
+  @include center;
+  flex-direction: column;
+}
+
+@mixin centerRow {
+  @include center;
+  flex-direction: row;
+}
+
+
+@mixin purpleButton {
+background-image: linear-gradient($primaryColor,$secondaryColor);
+color: white;
+border-radius: 20px ;
+height: 40px;
+width: 50%;
+border: 2px transparent;
+margin-bottom: 20px;
+
+}
+
+
+@mixin greyButton {
+  background-color:$backgroundColor;
+  border-radius: 20px ;
+  height: 50px;
+  width: 80%;
+  border: 2px transparent;
+  margin-bottom: 20px;
+}
+
+
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0px !important;
+  // font-family: "Shrikhand", cursive;
+}
+
+
+
+.nav-header #logo{
+  text-align: center;
+}
+
+
+
+.card-image img {
+  width: 100%;
+}
+
+.section-1,
+.section-3 {
+  background-color: $backgroundColor;
+}
+
+.section-1,
+.section-2,
+.section-3 {
+  @include center;
+ h3 ,
+  .step {
+    width: 100%;
+    @include centerRow;
+  }
+}
+
+.restaurant-card {
+  @include centerCol;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .heart-icon {
+    @include centerRow();
+  }
+  h5,
+  p {
+    margin: 0;
+  }
+}
+
+
+
+.section-1 button {
+  @include purpleButton;
+
+}
+
+
+
+
+.section-2 button {
+
+  @include greyButton
+}
+
+.section-2 button:active {
+  background-color: lavender;
+
+}
+
+
+.section-2 .step p {
+  color: white;
+  background-color:$primaryColor;
+  border-radius: 40px ;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 2px transparent;
+  
+}
+
+.step  {
+ 
+}
+
+
+
+
+.section-3 .restaurant-card {
+  width: 80%;
+  background-color: white;
+  border-radius: 15px 15px;
+  border: 5px solid white;
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-3 .heart-icon :active {
+  background-image: linear-gradient($primaryColor,$secondaryColor);
+
+
+}
+
+#enchanted-plate {
+  height: 70%;
+}
+
+footer {
+  background-color: $footerColor;
+  color: white;
+  height: 20vh;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+.LocationWrapper {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  @include center;
+}
