@@ -90,7 +90,8 @@ $borderRadius-card: 24px;
   background-color: #f3f3f3;
 }
 
-header, main{
+header,
+main {
   animation: fadeIn 3.5s ease-in 1;
 }
 
@@ -101,20 +102,55 @@ header, main{
   border: 15px solid grey;
   border-top-color: #9356dc;
   border-radius: 50%;
-  opacity: 0; 
+  opacity: 0;
   animation: loading 0.75s ease infinite, disappear 3s ease 1;
   position: fixed;
   top: 30%;
   left: 30%;
 }
 
+.ordered {
+  background-color: aquamarine;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 1.6em;
+  i {
+    font-size: 2em;
+    color: white;
+  }
+  transform: translateX(100%);
+  display: none;
+}
+
+.box:active {
+  .ordered {
+    animation: slideRightToLeft 2s 1;
+    transform: translateX(0%);
+    display: inline-flex;
+  }
+  i {
+    animation: loading 2s 1;
+  }
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(100%);
+    display: none;
+  }
+  100% {
+    transform: translateX(0%);
+    display: inline-flex;
+  }
+}
+
 @keyframes disappear {
   0% {
-
     opacity: 1;
   }
   100% {
-
     opacity: 0;
   }
 }
@@ -291,6 +327,7 @@ footer ul li {
   margin-bottom: 20px;
   height: 80px;
   align-items: center;
+  overflow: hidden;
 
   &-wrap {
     display: flex;
