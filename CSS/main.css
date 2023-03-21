@@ -618,6 +618,22 @@ footer ul li {
   align-items: center;
 }
 
+.section-header {
+  position: relative;
+  display: inline-block; /* Header are 100% width by their default block behaviour */
+}
+
+.section-header:before {
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  left: 0;
+  bottom: -2px;
+  background: blue;
+  display: block;
+  content: "";
+}
+
 .box {
   display: flex;
   justify-content: space-between;
@@ -664,23 +680,27 @@ footer ul li {
   opacity: 0;
 }
 
-.row :nth-child(1) {
+.row .box:nth-child(0) {
   animation: fadeIn 1000ms 1 forwards;
 }
 
-.row :nth-child(2) {
+.row .box:nth-child(1) {
+  animation: fadeIn 1000ms 1 forwards;
+}
+
+.row .box:nth-child(2) {
   animation: fadeIn 1000ms 1 forwards;
   animation-delay: 600ms;
 }
 
-.row :nth-child(3) {
+.row .box:nth-child(3) {
   animation: fadeIn 1000ms 1 forwards;
-  animation-delay: 700ms;
+  animation-delay: 900ms;
 }
 
-.row :nth-child(4) {
+.row .box:nth-child(4) {
   animation: fadeIn 1000ms 1 forwards;
-  animation-delay: 800ms;
+  animation-delay: 900ms;
 }
 
 @keyframes fadeIn {
