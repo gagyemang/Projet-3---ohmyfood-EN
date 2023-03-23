@@ -348,7 +348,7 @@ main {
   }
 }
 .ordered {
-  background-color: aquamarine;
+  background-color: #99e2d0;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -363,7 +363,7 @@ main {
 }
 
 .box:active .ordered {
-  animation: slideRightToLeft 2s 1 forwards;
+  animation: slideRightToLeft 2s 1 forwards infinite;
   transform: translateX(0%);
   display: inline-flex;
 }
@@ -373,17 +373,26 @@ main {
 
 @keyframes slideRightToLeft {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
     display: none;
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(100%);
     display: inline-flex;
   }
 }
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px !important;
+}
+
+i {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  padding: 10px;
 }
 
 .nav-header #logo {
@@ -399,12 +408,9 @@ body {
   background-color: #f2f2f2;
 }
 
-.section-3 #enchanted-plate {
-  overflow: hidden;
-}
-
-.section-3 #enchanted-plate .text {
-  margin-left: -7%;
+.section-3 #enchanted-plate img {
+  width: 327px;
+  height: 200px;
 }
 
 .section-1,
@@ -457,9 +463,17 @@ body {
   gap: 1em;
   flex-direction: row;
 }
-.text h5,
-.text p {
-  margin: 0;
+.text h4,
+.text p, .text i {
+  margin: 10px;
+}
+
+button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-3 .restaurant-card p {
+  font-weight: lighter;
 }
 
 .section-1 button {
@@ -470,6 +484,11 @@ body {
   width: 50%;
   border: 2px transparent;
   margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-1 button:hover {
+  background: linear-gradient(#c7b7da, #d885c0);
 }
 
 .section-2 .step p {
@@ -484,9 +503,12 @@ body {
   width: 80%;
   border: 2px transparent;
   margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 70px;
+  width: 90%;
 }
 
-.section-2 button:active {
+.section-2 button:hover {
   background-color: lavender;
 }
 
@@ -501,29 +523,21 @@ body {
 }
 
 .section-3 .restaurant-card {
-  width: 80%;
+  width: 100%;
+  height: 70%;
   background-color: white;
   border-radius: 15px 15px;
-  border: 5px solid white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .section-3 .heart-icon:active {
-  background-image: gradient;
+  background-image: linear-gradient(#9356dc, #ff79da);
 }
 
 .section-3 img {
-  height: 100%;
+  height: 50%;
   width: 100%;
-}
-
-.section-3-row #enchanted-plate {
-  height: 260px;
-}
-
-.section-3-row #enchanted-plate img {
-  height: 200px;
-  width: 300px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .main-header {
@@ -536,10 +550,15 @@ footer {
   color: white;
   height: 20vh;
   padding: 1.2em 0em;
+  position: relative;
 }
 footer .footer-logo,
 footer ul {
   padding-inline-start: 2em;
+}
+
+footer i {
+  color: white;
 }
 
 footer h3 {
@@ -555,6 +574,11 @@ footer ul li {
   list-style: none;
 }
 
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
 .LocationWrapper {
   background-color: lightgrey;
   display: flex;
@@ -566,20 +590,30 @@ footer ul li {
   gap: 1em;
 }
 
-/* the full palette */
+/* menus */
 .menu-header {
   display: flex;
   justify-content: space-between;
   padding-right: 80px;
 }
 
-.full-palette-image img {
+.menu-image img {
   height: 20%;
   width: 100%;
+  z-index: 1;
 }
 
 .menu-section {
   background-color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  margin-top: -90px;
+  border-radius: 40px 40px 0px 0px;
+}
+.menu-section .box .text-wrap p {
+  font-weight: lighter;
 }
 
 .HeartWrapper {
@@ -616,11 +650,13 @@ footer ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px;
 }
 
 .section-header {
   position: relative;
   display: inline-block; /* Header are 100% width by their default block behaviour */
+  margin-left: 15px;
 }
 
 .section-header:before {
@@ -629,9 +665,13 @@ footer ul li {
   width: 70%;
   left: 0;
   bottom: -2px;
-  background: blue;
+  background: #99e2d0;
   display: block;
   content: "";
+}
+
+.box h3, .box p {
+  margin: 10px;
 }
 
 .box {
@@ -643,6 +683,7 @@ footer ul li {
   overflow: hidden;
   margin: auto;
   margin-top: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 24px;
 }
@@ -650,9 +691,13 @@ footer ul li {
   display: flex;
   flex-direction: column;
 }
-.box h3,
 .box p {
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-direction: row;
 }
 
 .menu-section button {
@@ -665,13 +710,28 @@ footer ul li {
   margin-bottom: 20px;
 }
 
+.menu-section button:hover {
+  background: linear-gradient(#c7b7da, #d885c0);
+}
+
+.menu-button {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
 .menu-button {
   align-items: center;
 }
 
 .section-3 {
-  padding: 1.9em 0.8em;
+  padding: 2em 1.5em;
 }
+
+.section-2 h3 {
+  margin-left: 6%;
+}
+
 .section-3 h3 {
   margin-left: 6%;
 }

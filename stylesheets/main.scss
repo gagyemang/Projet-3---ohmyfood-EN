@@ -107,7 +107,7 @@ main {
 }
 
 .ordered {
-  background-color: aquamarine;
+  background-color: $tertiaryColor;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -121,9 +121,11 @@ main {
   display: none;
 }
 
+
+
 .box:active {
   .ordered {
-    animation: slideRightToLeft 2s 1 forwards;
+    animation: slideRightToLeft 2s 1 forwards infinite;
     transform: translateX(0%);
     display: inline-flex;
   }
@@ -134,20 +136,33 @@ main {
 
 @keyframes slideRightToLeft {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
     display: none;
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(100%);
     display: inline-flex;
+    
+    
   }
 }
 
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px !important;
+ 
   // font-family: "Shrikhand", cursive;
+}
+
+
+i {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  padding: 10px;
 }
 
 .nav-header #logo {
@@ -164,11 +179,12 @@ body {
 }
 
 .section-3 #enchanted-plate {
-  overflow: hidden;
+//  height: 327px
 }
 
-.section-3 #enchanted-plate .text {
-  margin-left: -7%;
+.section-3 #enchanted-plate img {
+  width: 327px;
+  height: 200px;
 }
 
 .section-1,
@@ -197,15 +213,33 @@ body {
   .heart-icon {
     @include centerRow();
   }
-  h5,
-  p {
-    margin: 0;
+  h4,
+  p,i {
+    margin: 10px;
   }
+}
+
+button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-3 .restaurant-card p{
+  font-weight: lighter
 }
 
 .section-1 button {
   @include purpleButton;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ 
+  
 }
+
+  .section-1 button:hover {
+  background: linear-gradient(#c7b7da,#d885c0)
+}
+ 
+ 
+  
 
 .section-2 .step p {
   margin-right: -30px;
@@ -214,10 +248,26 @@ body {
 
 .section-2 button {
   @include greyButton;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 70px;
+  width: 90%;
 }
 
-.section-2 button:active {
+
+// .section-2 .buttonWrapper{
+  
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 20px;
+//   margin-left: 20px;
+//   font-weight: bold;
+// }
+
+
+
+.section-2  button:hover {
   background-color: lavender;
+
 }
 
 .section-2 .step p {
@@ -231,31 +281,43 @@ body {
 }
 
 .section-3 .restaurant-card {
-  width: 80%;
+  width: 100%;
+  height: 70%;
+  
   background-color: white;
   border-radius: 15px 15px;
-  border: 5px solid white;
+  // border: 5px solid white;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+
+  // margin: 10% 15% 15% 0%;
+  
+  // height: 100%;
+  
 }
 
 .section-3 .heart-icon:active {
-  background-image: gradient;
+  background-image: $gradient;
 }
 
 .section-3 img {
-  height: 100%;
+  height: 50%;
   width: 100%;
+  border-radius: 15px 15px 0px 0px ;
+ 
+  
 }
 
-.section-3-row #enchanted-plate {
-  height: 260px;
-}
+// .section-3-row #enchanted-plate {
+//   height: 260px;
+// }
 
-.section-3-row #enchanted-plate img {
-  height: 200px;
-  width: 300px;
-}
+// .section-3-row #enchanted-plate img {
+//   height: 200px;
+//   // width: 300px;
+// }
 
 .main-header {
   display: flex;
@@ -265,12 +327,23 @@ body {
 footer {
   background-color: $footerColor;
   color: white;
+  // top: 1150px;
   height: 20vh;
   padding: 1.2em 0em;
+  position: relative;
+  
+  // position: fixed;
   .footer-logo,
   ul {
     padding-inline-start: 2em;
   }
+
+}
+
+
+
+footer i {
+  color: white;
 }
 
 footer h3 {
@@ -284,6 +357,12 @@ footer h3 {
 
 footer ul li {
   list-style: none;
+ 
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
 }
 
 .LocationWrapper {
@@ -293,18 +372,34 @@ footer ul li {
   @include center;
 }
 
-/* the full palette */
+/* menus */
 
 .menu-header {
   @include menuHeader;
 }
 
-.full-palette-image img {
+.menu-image img {
   @include menuImage;
+  z-index: 1;
+  // position: relative;
 }
 
 .menu-section {
   background-color: $backgroundColor;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  margin-top: -90px;
+  border-radius: 40px 40px 0px 0px;
+  
+ 
+  
+  .box .text-wrap p {
+    font-weight: lighter;
+  }
+ 
+
 }
 
 .HeartWrapper {
@@ -337,19 +432,20 @@ footer ul li {
     opacity: 1;
   }
 }
-
+ 
 .menu-section-header {
   font-family: "shrikhand", cursive;
   display: flex;
   justify-content: space-between;
-
   align-items: center;
+  padding: 15px;
 }
 
 
 .section-header{
   position: relative;
   display: inline-block; /* Header are 100% width by their default block behaviour */
+  margin-left: 15px;
 }
 .section-header:before{
   position: absolute;
@@ -357,9 +453,14 @@ footer ul li {
   width: 70%;
   left: 0;
   bottom: -2px;
-  background: blue;
+  background: $tertiaryColor;
   display: block;
   content: "";
+}
+
+
+.box h3, .box p {
+  margin: 10px;
 }
 
 .box {
@@ -372,26 +473,45 @@ footer ul li {
   overflow: hidden;
   margin: auto;
   margin-top: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 
   &-wrap {
     display: flex;
     flex-direction: column;
   }
 
+  p {
+    @include centerRow();
+  }
+
+  // h3,
   // p {
-  //   @include centerRow();
+  //   margin: 0;
   // }
 
-  h3,
-  p {
-    margin: 0;
-  }
 
   @include menuBoxBorder();
 }
 
+
+
+
 .menu-section button {
   @include purpleButton();
+  
+}
+
+.menu-section button:hover {
+  background: linear-gradient(#c7b7da,#d885c0)
+}
+ 
+
+.menu-button {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  
 }
 
 .menu-button {
@@ -399,10 +519,16 @@ footer ul li {
 }
 
 .section-3 {
-  padding: 1.9em 0.8em;
-  h3 {
-    margin-left: 6%;
-  }
+  padding: 2em 1.5em;
+  
+}
+
+.section-2 h3{
+  margin-left: 6%;
+}
+
+.section-3 h3 {
+  margin-left: 6%;
 }
 
 .row .box {
