@@ -349,7 +349,7 @@ main {
 }
 .nav-header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   gap: 30%;
 }
@@ -526,8 +526,14 @@ button {
 }
 
 .section-2 .step p {
-  margin-right: -30px;
+  left: 2.4em;
+  top: -0.8em;
   position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
 }
 
 .section-2 button {
@@ -861,6 +867,25 @@ footer a {
   .menu-button {
     width: 100%;
     margin: 0em 20%;
+  }
+  .section-1,
+  .section-2-row,
+  .section-3-row {
+    flex-direction: column;
+  }
+  .section-1 h3,
+  .section-1 .step,
+  .section-2-row h3,
+  .section-2-row .step,
+  .section-3-row h3,
+  .section-3-row .step {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: row;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
