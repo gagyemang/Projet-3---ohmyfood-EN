@@ -108,6 +108,13 @@ main {
   }
 }
 
+.nav-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 30%;
+}
+
 .ordered {
   background-color: $tertiaryColor;
   height: 100%;
@@ -485,6 +492,25 @@ footer a {
   margin: 10px;
 }
 
+.text-wrap {
+  width: 60%;
+  padding: 0.2em 0.8em;
+  p,
+  h3 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  p {
+    width: 100%;
+  }
+}
+
+.box p {
+  align-self: flex-end;
+}
+
 .box {
   display: flex;
   justify-content: space-between;
@@ -500,10 +526,6 @@ footer a {
   &-wrap {
     display: flex;
     flex-direction: column;
-  }
-
-  p {
-    @include centerRow();
   }
 
   // h3,
@@ -585,19 +607,23 @@ footer a {
   }
 }
 
-@media only screen and (min-width: 720px) and (max-width: 992px) {
+@media only screen and (min-width: 620px) {
   .menu-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
+
   .nav-header {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
     gap: 40%;
+    a {
+      align-items: center;
+      display: flex;
+      text-decoration: none;
+    }
   }
+
   .menu-section-header {
     width: 100%;
   }
