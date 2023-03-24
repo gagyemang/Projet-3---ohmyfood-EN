@@ -526,7 +526,7 @@ button {
 }
 
 .section-2 .step p {
-  left: 2.4em;
+  margin-right: -30px;
   top: -0.8em;
   position: relative;
   text-align: center;
