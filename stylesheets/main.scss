@@ -5,7 +5,7 @@ $tertiaryColor: #99e2d0;
 
 $backgroundColor: #f2f2f2;
 $footerColor: #2b2928;
-$gradient: linear-gradient($primaryColor, $secondaryColor);
+$gradient: linear-gradient($secondaryColor, $primaryColor);
 $borderRadius-card: 24px;
 
 /* mix ins */
@@ -430,7 +430,9 @@ footer a {
     top: -100%;
 
     z-index: 1;
-    color: purple;
+    background: $gradient();
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &:active .fa-solid,
@@ -545,7 +547,7 @@ footer a {
 }
 
 .menu-section button:hover {
-  background: linear-gradient(#d885c0, #c7b7da);
+  background: linear-gradient(#c7b7da, #d885c0);
 }
 
 .menu-button {
