@@ -406,8 +406,9 @@ header {
   text-align: center;
 }
 
-.card-image img {
+.card-image {
   width: 100%;
+  height: 10em;
 }
 
 .section-1 p {
@@ -575,7 +576,8 @@ button {
 }
 
 .section-3 img {
-  height: 50%;
+  height: 100%;
+  object-fit: cover;
   width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
@@ -654,6 +656,12 @@ footer a {
 }
 .menu-section .box .text-wrap p {
   font-weight: lighter;
+}
+h4 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .HeartWrapper {
