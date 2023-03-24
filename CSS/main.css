@@ -809,6 +809,30 @@ footer a {
     opacity: 1;
   }
 }
+@media only screen and (min-width: 720px) and (max-width: 992px) {
+  .menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 40%;
+  }
+  .menu-section-header {
+    width: 100%;
+  }
+  .mains-section {
+    width: 35%;
+  }
+  .menu-button {
+    width: 100%;
+    margin: 0em 20%;
+  }
+}
 /* Large devices (laptops/desktops, 992px and up) */
 
 /*# sourceMappingURL=main.css.map */
