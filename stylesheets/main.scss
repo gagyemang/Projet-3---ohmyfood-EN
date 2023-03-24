@@ -652,17 +652,18 @@ footer a {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  // ench
-
-  // .section-3-row #enchanted-plate img {
-  //   // height: 200px;
-  //   // width: 300px;
-  //   width: 190px;
-  //   height: 132px;
-  // }
-
-  // .section-3 img {
-  //   width: 100%;
-
-  // }
+  .menu-image {
+    position: absolute;
+    height: 140%;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  .menu-section {
+    margin-top: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
 }

@@ -864,5 +864,21 @@ footer a {
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .menu-image {
+    position: absolute;
+    height: 140%;
+  }
+  .menu-image img {
+    object-fit: cover;
+    height: 100%;
+  }
+  .menu-section {
+    margin-top: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
