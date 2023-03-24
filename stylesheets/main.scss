@@ -12,6 +12,10 @@ $borderRadius-card: 24px;
 i {
   text-decoration: none;
 }
+
+
+
+
 @mixin center {
   display: flex;
   flex-wrap: wrap;
@@ -112,7 +116,7 @@ main {
 
 .nav-header {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   width: 100%;
   gap: 30%;
 }
@@ -136,7 +140,7 @@ main {
 
 .box:active {
   .ordered {
-    animation: slideRightToLeft 2s 1 forwards infinite;
+    animation: slideRightToLeft 2s 1 infinite;
     transform: translateX(0%);
     display: inline-flex;
   }
@@ -191,9 +195,7 @@ header {
   background-color: $backgroundColor;
 }
 
-.section-3 #enchanted-plate {
-  //  height: 327px
-}
+
 
 .section-3 #enchanted-plate img {
   width: 327px;
@@ -305,9 +307,14 @@ button {
 // }
 
 .section-2 button:hover {
-  background-color: lavender;
-  color: #9356dc !important;
+  background-color:#d9cfe5;
+ 
+  i{
+    color: $primaryColor;
+  }
+    
 }
+
 
 .section-2 .step p {
   color: white;
@@ -318,6 +325,29 @@ button {
   text-align: center;
   border: 2px transparent;
 }
+
+
+.section-2 .fa-solid {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: -15px;
+}
+
+
+
+.section-2 .create-menu-button .label {
+  margin-left: -60px;
+}
+
+.section-2 .choose-restaurant-button .label {
+  margin-left: -50px;
+}
+
+.section-2 button i {
+  color: grey;
+}
+
+
 
 .section-3 .restaurant-card {
   width: 100%;
@@ -354,7 +384,7 @@ button {
 //   // width: 300px;
 // }
 
-.main-header {
+.main-header .nav-header {
   display: flex;
   justify-content: center;
 }
@@ -405,6 +435,11 @@ footer a {
 
 /* menus */
 
+.menu-header i {
+  color: black;
+}
+
+
 .menu-header {
   @include menuHeader;
 }
@@ -427,8 +462,7 @@ footer a {
   .box .text-wrap p {
     font-weight: lighter;
   }
-  .text-wrap {
-  }
+  
 }
 h4 {
   margin-block-start: 0em;
@@ -590,6 +624,12 @@ h4 {
   margin-left: 6%;
 }
 
+
+.section-3  .restaurant-card h4 {
+  margin-left: -2px;
+}
+
+
 .row .box {
   opacity: 0;
 }
@@ -632,6 +672,48 @@ h4 {
 }
 
 @media only screen and (min-width: 620px) {
+
+
+
+
+.LocationWrapper {
+  height: 60px;
+  font-size: 1.2em;
+  
+}
+
+  .section-1 h3 {
+    font-size: 2em
+  }
+
+  .section-1 p {
+    font-size: 1.5em;
+  }
+
+  .section-1 button {
+    width: 90%;
+    height: 60px;
+  }
+  
+
+
+
+.section-header  {
+  font-size: 2em;
+}
+
+.menu-section-header .fa-regular {
+ font-size: 40px;
+}
+
+.menu-section-header .fa-solid {
+  font-size: 40px;
+}
+
+.enchanted-image img{
+  height:450px
+}
+
   .menu-section {
     display: flex;
     flex-wrap: wrap;
@@ -639,12 +721,21 @@ h4 {
     align-items: center;
   }
 
+  .box{
+height: 160px;
+
+  
   h3 {
-    font-size: 0.9em;
+    font-size: 1.3em;
   }
   p {
-    font-size: 0.75em;
+    font-size: 1.3em;
   }
+
+  }
+
+  
+  
 
   .nav-header {
     gap: 40%;
@@ -657,6 +748,11 @@ h4 {
 
   .menu-section-header {
     width: 100%;
+    font-size: 1.4em;
+
+
+
+    
   }
 
   .mains-section {
@@ -680,7 +776,7 @@ h4 {
   .MainHomepage .section-1,
   .section-2 {
     margin: auto;
-    width: 30%;
+    width: 60%;
     background-color: white;
   }
   .section-3 {
@@ -688,7 +784,7 @@ h4 {
     background-color: white;
     flex-wrap: wrap;
     display: flex;
-    width: 70%;
+    // width: 70%;
     h3 {
       width: 100%;
     }
@@ -697,12 +793,16 @@ h4 {
       flex-wrap: wrap;
       width: 100%;
       .restaurant-card {
-        width: 30%;
+        width: 40%;
         height: 16em;
       }
     }
   }
 }
+
+
+
+
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -721,3 +821,6 @@ h4 {
     width: 75%;
   }
 }
+
+
+
