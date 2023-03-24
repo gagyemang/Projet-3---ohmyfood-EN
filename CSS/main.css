@@ -895,6 +895,31 @@ h4 {
     gap: 1em;
     flex-direction: row;
   }
+  .MainHomepage .section-1,
+  .section-2 {
+    margin: auto;
+    width: 30%;
+    background-color: white;
+  }
+  .section-3 {
+    margin: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+    width: 70%;
+  }
+  .section-3 h3 {
+    width: 100%;
+  }
+  .section-3 .section-3-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .section-3 .section-3-row .restaurant-card {
+    width: 30%;
+    height: 16em;
+  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {

@@ -339,7 +339,7 @@ button {
 
 .section-3 img {
   height: 100%;
-  object-fit:cover;
+  object-fit: cover;
   width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
@@ -427,7 +427,6 @@ footer a {
     font-weight: lighter;
   }
   .text-wrap {
-    
   }
 }
 h4 {
@@ -674,6 +673,31 @@ h4 {
     .step {
       width: 100%;
       @include centerRow;
+    }
+  }
+  .MainHomepage .section-1,
+  .section-2 {
+    margin: auto;
+    width: 30%;
+    background-color: white;
+  }
+  .section-3 {
+    margin: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+    width: 70%;
+    h3 {
+      width: 100%;
+    }
+    .section-3-row {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      .restaurant-card {
+        width: 30%;
+        height: 16em;
+      }
     }
   }
 }
