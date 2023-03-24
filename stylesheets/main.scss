@@ -92,6 +92,7 @@ main {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -101,6 +102,7 @@ main {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -113,15 +115,15 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0em 1.6em;
+
   i {
     font-size: 2em;
     color: white;
   }
+
   transform: translateX(100%);
   display: none;
 }
-
-
 
 .box:active {
   .ordered {
@@ -129,6 +131,7 @@ main {
     transform: translateX(0%);
     display: inline-flex;
   }
+
   i {
     animation: loading 2s 1;
   }
@@ -143,18 +146,15 @@ main {
   100% {
     transform: translateX(100%);
     display: inline-flex;
-    
-    
   }
 }
 
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px !important;
- 
+
   // font-family: "Shrikhand", cursive;
 }
-
 
 i {
   text-decoration: none;
@@ -173,13 +173,19 @@ header {
   width: 100%;
 }
 
+.section-1 p {
+  font-weight: lighter;
+  margin: 10px;
+  text-align: center;
+}
+
 .section-1,
 .section-3 {
   background-color: $backgroundColor;
 }
 
 .section-3 #enchanted-plate {
-//  height: 327px
+  //  height: 327px
 }
 
 .section-3 #enchanted-plate img {
@@ -191,6 +197,7 @@ header {
 .section-2-row,
 .section-3-row {
   @include center;
+
   h3,
   .step {
     width: 100%;
@@ -206,15 +213,19 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
+
   &-wrap {
     display: flex;
     flex-direction: column;
   }
+
   .heart-icon {
     @include centerRow();
   }
+
   h4,
-  p,i {
+  p,
+  i {
     margin: 10px;
   }
 }
@@ -223,23 +234,40 @@ button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.section-3 .restaurant-card p{
-  font-weight: lighter
+.card-image {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.new-text {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  text-decoration: none;
+  color: rgba(79, 77, 77, 0.868);
+
+  border: solid $tertiaryColor 3px;
+  border-radius: 2px;
+  background-color: $tertiaryColor;
+  width: 70px;
+
+  font-weight: 300;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-3 .restaurant-card p {
+  font-weight: lighter;
 }
 
 .section-1 button {
   @include purpleButton;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
- 
-  
 }
 
-  .section-1 button:hover {
-  background: linear-gradient(#c7b7da,#d885c0)
+.section-1 button:hover {
+  background: linear-gradient(#d885c0, #c7b7da);
 }
- 
- 
-  
 
 .section-2 .step p {
   margin-right: -30px;
@@ -253,9 +281,8 @@ button {
   width: 90%;
 }
 
-
 // .section-2 .buttonWrapper{
-  
+
 //   display: flex;
 //   flex-wrap: wrap;
 //   gap: 20px;
@@ -263,11 +290,8 @@ button {
 //   font-weight: bold;
 // }
 
-
-
-.section-2  button:hover {
+.section-2 button:hover {
   background-color: lavender;
-
 }
 
 .section-2 .step p {
@@ -283,19 +307,16 @@ button {
 .section-3 .restaurant-card {
   width: 100%;
   height: 70%;
-  
+
   background-color: white;
   border-radius: 15px 15px;
   // border: 5px solid white;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-
-
   // margin: 10% 15% 15% 0%;
-  
+
   // height: 100%;
-  
 }
 
 .section-3 .heart-icon:active {
@@ -305,9 +326,7 @@ button {
 .section-3 img {
   height: 50%;
   width: 100%;
-  border-radius: 15px 15px 0px 0px ;
- 
-  
+  border-radius: 15px 15px 0px 0px;
 }
 
 // .section-3-row #enchanted-plate {
@@ -331,16 +350,13 @@ footer {
   height: 20vh;
   padding: 1.2em 0em;
   position: relative;
-  
+
   // position: fixed;
   .footer-logo,
   ul {
     padding-inline-start: 2em;
   }
-
 }
-
-
 
 footer i {
   color: white;
@@ -357,7 +373,6 @@ footer h3 {
 
 footer ul li {
   list-style: none;
- 
 }
 
 footer a {
@@ -392,26 +407,26 @@ footer a {
   position: relative;
   margin-top: -90px;
   border-radius: 40px 40px 0px 0px;
-  
- 
-  
+
   .box .text-wrap p {
     font-weight: lighter;
   }
- 
-
 }
 
 .HeartWrapper {
   display: grid;
   overflow: hidden;
+
   .fa-solid {
+    opacity: 0;
     position: relative;
     top: -100%;
+
     z-index: 1;
     color: purple;
-    animation: fillUp 1s infinite;
+    animation: fillUp 2s infinite;
   }
+
   .fa-regular {
     grid-row: 0;
     grid-column: 0;
@@ -426,13 +441,19 @@ footer a {
     opacity: 0;
   }
 
+  50% {
+    transform: translateY(0%);
+    display: block;
+    opacity: 0;
+  }
+
   100% {
     transform: translateY(0%);
     display: block;
     opacity: 1;
   }
 }
- 
+
 .menu-section-header {
   font-family: "shrikhand", cursive;
   display: flex;
@@ -441,13 +462,14 @@ footer a {
   padding: 15px;
 }
 
-
-.section-header{
+.section-header {
   position: relative;
-  display: inline-block; /* Header are 100% width by their default block behaviour */
+  display: inline-block;
+  /* Header are 100% width by their default block behaviour */
   margin-left: 15px;
 }
-.section-header:before{
+
+.section-header:before {
   position: absolute;
   height: 2px;
   width: 70%;
@@ -458,8 +480,8 @@ footer a {
   content: "";
 }
 
-
-.box h3, .box p {
+.box h3,
+.box p {
   margin: 10px;
 }
 
@@ -475,7 +497,6 @@ footer a {
   margin-top: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-
   &-wrap {
     display: flex;
     flex-direction: column;
@@ -490,28 +511,21 @@ footer a {
   //   margin: 0;
   // }
 
-
   @include menuBoxBorder();
 }
 
-
-
-
 .menu-section button {
   @include purpleButton();
-  
 }
 
 .menu-section button:hover {
-  background: linear-gradient(#c7b7da,#d885c0)
+  background: linear-gradient(#d885c0, #c7b7da);
 }
- 
 
 .menu-button {
   display: flex;
   justify-content: center;
   padding: 30px;
-  
 }
 
 .menu-button {
@@ -520,10 +534,9 @@ footer a {
 
 .section-3 {
   padding: 2em 1.5em;
-  
 }
 
-.section-2 h3{
+.section-2 h3 {
   margin-left: 6%;
 }
 
@@ -534,33 +547,39 @@ footer a {
 .row .box {
   opacity: 0;
 }
+
 .row .box:nth-child(0) {
   animation: fadeIn 1000ms 1 forwards;
 }
+
 .row .box:nth-child(1) {
   animation: fadeIn 1000ms 1 forwards;
 }
+
 .row .box:nth-child(2) {
   animation: fadeIn 1000ms 1 forwards;
   animation-delay: 600ms;
 }
+
 .row .box:nth-child(3) {
   animation: fadeIn 1000ms 1 forwards;
   animation-delay: 900ms;
 }
+
 .row .box:nth-child(4) {
   animation: fadeIn 1000ms 1 forwards;
   animation-delay: 900ms;
 }
 
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }

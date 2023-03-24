@@ -403,6 +403,12 @@ header {
   width: 100%;
 }
 
+.section-1 p {
+  font-weight: lighter;
+  margin: 10px;
+  text-align: center;
+}
+
 .section-1,
 .section-3 {
   background-color: #f2f2f2;
@@ -464,11 +470,32 @@ header {
   flex-direction: row;
 }
 .text h4,
-.text p, .text i {
+.text p,
+.text i {
   margin: 10px;
 }
 
 button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.new-text {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  text-decoration: none;
+  color: rgba(79, 77, 77, 0.868);
+  border: solid #99e2d0 3px;
+  border-radius: 2px;
+  background-color: #99e2d0;
+  width: 70px;
+  font-weight: 300;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -488,7 +515,7 @@ button {
 }
 
 .section-1 button:hover {
-  background: linear-gradient(#c7b7da, #d885c0);
+  background: linear-gradient(#d885c0, #c7b7da);
 }
 
 .section-2 .step p {
@@ -621,11 +648,12 @@ footer a {
   overflow: hidden;
 }
 .HeartWrapper .fa-solid {
+  opacity: 0;
   position: relative;
   top: -100%;
   z-index: 1;
   color: purple;
-  animation: fillUp 1s infinite;
+  animation: fillUp 2s infinite;
 }
 .HeartWrapper .fa-regular {
   grid-row: 0;
@@ -637,6 +665,11 @@ footer a {
   0% {
     transform: translateY(100%);
     display: none;
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0%);
+    display: block;
     opacity: 0;
   }
   100% {
@@ -655,7 +688,8 @@ footer a {
 
 .section-header {
   position: relative;
-  display: inline-block; /* Header are 100% width by their default block behaviour */
+  display: inline-block;
+  /* Header are 100% width by their default block behaviour */
   margin-left: 15px;
 }
 
@@ -670,7 +704,8 @@ footer a {
   content: "";
 }
 
-.box h3, .box p {
+.box h3,
+.box p {
   margin: 10px;
 }
 
@@ -711,7 +746,7 @@ footer a {
 }
 
 .menu-section button:hover {
-  background: linear-gradient(#c7b7da, #d885c0);
+  background: linear-gradient(#d885c0, #c7b7da);
 }
 
 .menu-button {
