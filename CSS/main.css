@@ -311,6 +311,10 @@ template {
 }
 
 /* mix ins */
+i {
+  text-decoration: none;
+}
+
 /* spinner */
 header,
 main {
@@ -391,11 +395,6 @@ main {
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px !important;
-}
-
-i {
-  text-decoration: none;
-  color: black;
 }
 
 header {
@@ -551,6 +550,7 @@ button {
 
 .section-2 button:hover {
   background-color: lavender;
+  color: #9356dc !important;
 }
 
 .section-2 .step p {

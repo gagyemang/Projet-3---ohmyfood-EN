@@ -9,7 +9,9 @@ $gradient: linear-gradient($secondaryColor, $primaryColor);
 $borderRadius-card: 24px;
 
 /* mix ins */
-
+i {
+  text-decoration: none;
+}
 @mixin center {
   display: flex;
   flex-wrap: wrap;
@@ -163,10 +165,7 @@ body {
   // font-family: "Shrikhand", cursive;
 }
 
-i {
-  text-decoration: none;
-  color: black;
-}
+
 
 header {
   padding: 10px;
@@ -275,6 +274,7 @@ button {
 
 .section-1 button:hover {
   background: linear-gradient(#d885c0, #c7b7da);
+  
 }
 
 .section-2 .step p {
@@ -306,6 +306,7 @@ button {
 
 .section-2 button:hover {
   background-color: lavender;
+  color: #9356dc !important;
 }
 
 .section-2 .step p {
@@ -564,6 +565,7 @@ h4 {
 
 .menu-section button:hover {
   background: linear-gradient(#c7b7da, #d885c0);
+
 }
 
 .menu-button {
