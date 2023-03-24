@@ -660,7 +660,9 @@ footer a {
   top: -100%;
   z-index: 1;
   color: purple;
-  animation: fillUp 2s infinite;
+}
+.HeartWrapper:active .fa-solid, .HeartWrapper:hover .fa-solid {
+  animation: fillUp 1s 1 forwards;
 }
 .HeartWrapper .fa-regular {
   grid-row: 0;

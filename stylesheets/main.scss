@@ -431,7 +431,11 @@ footer a {
 
     z-index: 1;
     color: purple;
-    animation: fillUp 2s infinite;
+  }
+
+  &:active .fa-solid,
+  &:hover .fa-solid {
+    animation: fillUp 1s 1 forwards;
   }
 
   .fa-regular {
