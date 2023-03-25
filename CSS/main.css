@@ -668,6 +668,14 @@ footer a {
   z-index: 1;
 }
 
+.enchanted-image {
+  height: 300px;
+}
+
+.enchanted-image img {
+  height: 100%;
+}
+
 .menu-section {
   background-color: #f2f2f2;
   height: 100%;
@@ -993,6 +1001,16 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     width: 75%;
+  }
+  .loader {
+    top: 50%;
+    left: 50%;
+  }
+  .enchanted-image img {
+    width: 176%;
+  }
+  footer {
+    text-align: center;
   }
 }
 
