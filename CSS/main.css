@@ -710,7 +710,7 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 .HeartWrapper:active .fa-solid, .HeartWrapper:hover .fa-solid {
-  animation: fillUp 1s 1 forwards;
+  animation: fillUp 1s forwards;
 }
 .HeartWrapper .fa-regular {
   grid-row: 0;
@@ -845,10 +845,6 @@ h4 {
 
 .row .box {
   opacity: 0;
-}
-
-.row .box:nth-child(0) {
-  animation: fadeIn 1000ms 1 forwards;
 }
 
 .row .box:nth-child(1) {
