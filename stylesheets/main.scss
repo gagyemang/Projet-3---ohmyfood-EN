@@ -13,9 +13,6 @@ i {
   text-decoration: none;
 }
 
-
-
-
 @mixin center {
   display: flex;
   flex-wrap: wrap;
@@ -93,6 +90,11 @@ main {
   top: 40%;
   left: 40%;
 }
+.menu-section-header .HeartWrapper {
+  font-size: 1.7em !important;
+  top: 0.5em;
+  position: relative;
+}
 
 @keyframes loading {
   0% {
@@ -169,8 +171,6 @@ body {
   // font-family: "Shrikhand", cursive;
 }
 
-
-
 header {
   padding: 10px;
 }
@@ -195,7 +195,9 @@ header {
   background-color: $backgroundColor;
 }
 
-
+.enchanted-header .HeartWrapper {
+  top: -5px;
+}
 
 .section-3 #enchanted-plate img {
   width: 327px;
@@ -276,7 +278,6 @@ button {
 
 .section-1 button:hover {
   background: linear-gradient(#d885c0, #c7b7da);
-  
 }
 
 .section-2 .step p {
@@ -307,14 +308,12 @@ button {
 // }
 
 .section-2 button:hover {
-  background-color:#d9cfe5;
- 
-  i{
+  background-color: #d9cfe5;
+
+  i {
     color: $primaryColor;
   }
-    
 }
-
 
 .section-2 .step p {
   color: white;
@@ -326,14 +325,11 @@ button {
   border: 2px transparent;
 }
 
-
 .section-2 .fa-solid {
   display: flex;
   margin-left: 20px;
   margin-bottom: -15px;
 }
-
-
 
 .section-2 .create-menu-button .label {
   margin-left: -60px;
@@ -346,8 +342,6 @@ button {
 .section-2 button i {
   color: grey;
 }
-
-
 
 .section-3 .restaurant-card {
   width: 100%;
@@ -439,7 +433,6 @@ footer a {
   color: black;
 }
 
-
 .menu-header {
   @include menuHeader;
 }
@@ -449,7 +442,6 @@ footer a {
   z-index: 1;
   // position: relative;
 }
-
 
 .enchanted-image {
   height: 300px;
@@ -471,7 +463,6 @@ footer a {
   .box .text-wrap p {
     font-weight: lighter;
   }
-  
 }
 h4 {
   margin-block-start: 0em;
@@ -497,7 +488,7 @@ h4 {
 
   &:active .fa-solid,
   &:hover .fa-solid {
-    animation: fillUp 1s  forwards;
+    animation: fillUp 1s forwards;
   }
 
   .fa-regular {
@@ -608,7 +599,6 @@ h4 {
 
 .menu-section button:hover {
   background: linear-gradient(#c7b7da, #d885c0);
-
 }
 
 .menu-button {
@@ -633,17 +623,13 @@ h4 {
   margin-left: 6%;
 }
 
-
-.section-3  .restaurant-card h4 {
+.section-3 .restaurant-card h4 {
   margin-left: -2px;
 }
-
 
 .row .box {
   opacity: 0;
 }
-
-
 
 .row .box:nth-child(1) {
   animation: fadeIn 1000ms 1 forwards;
@@ -679,18 +665,13 @@ h4 {
 }
 
 @media only screen and (min-width: 620px) {
-
-
-
-
-.LocationWrapper {
-  height: 60px;
-  font-size: 1.2em;
-  
-}
+  .LocationWrapper {
+    height: 60px;
+    font-size: 1.2em;
+  }
 
   .section-1 h3 {
-    font-size: 2em
+    font-size: 2em;
   }
 
   .section-1 p {
@@ -701,25 +682,20 @@ h4 {
     width: 90%;
     height: 60px;
   }
-  
+
+  .section-header {
+    font-size: 1.5em;
+  }
+
+  .menu-section {
+    align-items: flex-start;
+  }
 
 
 
-.section-header  {
-  font-size: 2em;
-}
-
-.menu-section-header .fa-regular {
- font-size: 40px;
-}
-
-.menu-section-header .fa-solid {
-  font-size: 40px;
-}
-
-.enchanted-image img{
-  height:450px
-}
+  .enchanted-image img {
+    height: 450px;
+  }
 
   .menu-section {
     display: flex;
@@ -728,21 +704,16 @@ h4 {
     align-items: center;
   }
 
-  .box{
-height: 160px;
+  .box {
+    height: 160px;
 
-  
-  h3 {
-    font-size: 1.3em;
+    h3 {
+      font-size: 1.3em;
+    }
+    p {
+      font-size: 1.3em;
+    }
   }
-  p {
-    font-size: 1.3em;
-  }
-
-  }
-
-  
-  
 
   .nav-header {
     gap: 40%;
@@ -756,10 +727,6 @@ height: 160px;
   .menu-section-header {
     width: 100%;
     font-size: 1.4em;
-
-
-
-    
   }
 
   .mains-section {
@@ -807,10 +774,6 @@ height: 160px;
   }
 }
 
-
-
-
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .menu-image {
@@ -828,22 +791,16 @@ height: 160px;
     width: 75%;
   }
 
+  .loader {
+    top: 50%;
+    left: 50%;
+  }
 
-.loader {
-  top: 50%;
-  left: 50%;
+  .enchanted-image img {
+    width: 176%;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
-
-
-.enchanted-image img {
-  width: 176%;
-
-
-}
-
-footer {
-  text-align: center;
-}
-}
-
-

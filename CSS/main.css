@@ -335,6 +335,12 @@ main {
   left: 40%;
 }
 
+.menu-section-header .HeartWrapper {
+  font-size: 1.7em !important;
+  top: 0.5em;
+  position: relative;
+}
+
 @keyframes loading {
   0% {
     transform: rotate(0deg);
@@ -418,6 +424,10 @@ header {
 .section-1,
 .section-3 {
   background-color: #f2f2f2;
+}
+
+.enchanted-header .HeartWrapper {
+  top: -5px;
 }
 
 .section-3 #enchanted-plate img {
@@ -893,13 +903,10 @@ h4 {
     height: 60px;
   }
   .section-header {
-    font-size: 2em;
+    font-size: 1.5em;
   }
-  .menu-section-header .fa-regular {
-    font-size: 40px;
-  }
-  .menu-section-header .fa-solid {
-    font-size: 40px;
+  .menu-section {
+    align-items: flex-start;
   }
   .enchanted-image img {
     height: 450px;
