@@ -397,10 +397,6 @@ main {
   max-width: 200px; /* Sets maximum width of the title */
 }
 
-i {
-  animation: loading 2s 1;
-}
-
 @keyframes slideRightToLeft {
   0% {
     transform: translateX(100%);

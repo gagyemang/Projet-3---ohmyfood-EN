@@ -87,6 +87,7 @@ main {
   top: 0.5em;
   position: relative;
 }
+
 .loader {
   content: "";
   width: 75px;
@@ -187,9 +188,9 @@ main {
   
   
   
-  i {
-    animation: loading 2s 1;
-  }
+  // i {
+  //   animation: loading 2s 1;
+  // }
 
 
 @keyframes slideRightToLeft {
