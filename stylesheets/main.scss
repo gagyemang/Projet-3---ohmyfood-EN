@@ -158,7 +158,9 @@ main {
 
   
 
-  .herb-encrusted-box:active  {
+
+  
+  .box:active  {
     p { 
     white-space: nowrap; /* Prevents title from wrapping */
     overflow: hidden; /* Hides any overflowing text */
@@ -167,7 +169,7 @@ main {
   }
   }
 
-  .fried-egg-box:active  {
+  .box:active  {
     p { 
     white-space: nowrap; /* Prevents title from wrapping */
     overflow: hidden; /* Hides any overflowing text */
@@ -175,6 +177,8 @@ main {
     max-width: 200px; /* Sets maximum width of the title */
   }
   }
+
+  
 
  
 //   .herb-encrusted-box p {
