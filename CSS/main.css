@@ -383,14 +383,14 @@ main {
   display: inline-flex;
 }
 
-.herb-encrusted-box:active p {
+.box:active p {
   white-space: nowrap; /* Prevents title from wrapping */
   overflow: hidden; /* Hides any overflowing text */
   text-overflow: ellipsis; /* Displays an ellipsis (...) when text overflows */
   max-width: 200px; /* Sets maximum width of the title */
 }
 
-.fried-egg-box:active p {
+.box:active p {
   white-space: nowrap; /* Prevents title from wrapping */
   overflow: hidden; /* Hides any overflowing text */
   text-overflow: ellipsis; /* Displays an ellipsis (...) when text overflows */
