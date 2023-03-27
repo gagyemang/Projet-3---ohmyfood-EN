@@ -70,13 +70,23 @@ i {
   border-radius: $borderRadius-card;
 }
 
-/* spinner */
+
+
+
+
 
 header,
 main {
   animation: fadeIn 3.5s ease-in 1;
 }
 
+
+
+.menu-section-header .HeartWrapper {
+  font-size: 1.7em !important;
+  top: 0.5em;
+  position: relative;
+}
 .loader {
   content: "";
   width: 75px;
@@ -89,11 +99,6 @@ main {
   position: fixed;
   top: 40%;
   left: 40%;
-}
-.menu-section-header .HeartWrapper {
-  font-size: 1.7em !important;
-  top: 0.5em;
-  position: relative;
 }
 
 @keyframes loading {
@@ -140,26 +145,61 @@ main {
   display: none;
 }
 
-.box:active {
-  .ordered {
-    animation: slideRightToLeft 2s 1 infinite;
+
+
+
+
+.box:active .ordered {
+    animation: slideRightToLeft 2s 1 ;
     transform: translateX(0%);
     display: inline-flex;
   }
 
+  
+
+  .herb-encrusted-box:active  {
+    p { 
+    white-space: nowrap; /* Prevents title from wrapping */
+    overflow: hidden; /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) when text overflows */
+    max-width: 200px; /* Sets maximum width of the title */
+  }
+  }
+
+  .fried-egg-box:active  {
+    p { 
+    white-space: nowrap; /* Prevents title from wrapping */
+    overflow: hidden; /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) when text overflows */
+    max-width: 200px; /* Sets maximum width of the title */
+  }
+  }
+
+ 
+//   .herb-encrusted-box p {
+  
+//     white-space: nowrap; /* Prevents title from wrapping */
+//   overflow: hidden; /* Hides any overflowing text */
+//   text-overflow: ellipsis; /* Displays an ellipsis (...) when text overflows */
+//   max-width: 200px; /* Sets maximum width of the title */
+// }
+  
+  
+  
+  
   i {
     animation: loading 2s 1;
   }
-}
+
 
 @keyframes slideRightToLeft {
   0% {
-    transform: translateX(0%);
+    transform: translateX(100%);
     display: none;
   }
 
   100% {
-    transform: translateX(100%);
+    transform: translateX(0%);
     display: inline-flex;
   }
 }
@@ -492,8 +532,8 @@ h4 {
   }
 
   .fa-regular {
-    grid-row: 0;
-    grid-column: 0;
+    
+    
     z-index: 0;
   }
 }
@@ -549,9 +589,13 @@ h4 {
   margin: 10px;
 }
 
+
+
+
+
 .text-wrap {
-  width: 60%;
-  padding: 0.2em 0.8em;
+ 
+  padding: 0.1em 0.6em;
   p,
   h3 {
     margin-block-start: 0em;
